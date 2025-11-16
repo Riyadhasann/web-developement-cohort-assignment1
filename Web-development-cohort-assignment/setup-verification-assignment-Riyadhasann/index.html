@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Verification - Web Dev Bootcamp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .checkmark {
+            font-size: 5em;
+            margin: 20px 0;
+            animation: scaleIn 0.5s ease-in-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .info {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .tools {
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li::before {
+            content: "✅";
+            margin-right: 10px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #667eea;
+        }
+
+        .footer p {
+            color: #667eea;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .checkmark {
+                font-size: 4em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            p, li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Setup Verification Complete!</h1>
+        <div class="checkmark">✅</div>
+        
+        <div class="info">
+            <!-- EDIT THE FOLLOWING TWO LINES WITH YOUR INFORMATION -->
+            <h2>Student: Md. Riyad Hasan</h2>
+            <p>GitHub Username: Riyadhasann</p>
+            <!-- ------------------------------------------------- -->
+            <p>Date: <span id="date"></span></p>
+        </div>
+
+        <div class="tools">
+            <h3>Tools Successfully Configured:</h3>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Git & GitHub</li>
+                <li>GitHub Classroom</li>
+                <li>Node.js & npm</li>
+                <li>Vercel Deployment</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>🚀 Ready to start the Web Development Bootcamp!</p>
+        </div>
+    </div>
+
+    <script>
+        // Automatically display today's date
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('date').textContent = today.toLocaleDateString('en-US', options);
+    </script>
+</body>
+</html>
